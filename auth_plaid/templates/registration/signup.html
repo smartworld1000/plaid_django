@@ -1,0 +1,58 @@
+{% extends '../auth_plaid/base.html' %}
+{% load static %}
+
+{% block header %}
+    <div class="header">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div class="auth-div">
+            <!-- <h3><a href="/auth/login">Log in</a></h1> -->
+            <h3><a href="/">+1 646 787 6998</a></h1>
+            <h3><a href="/auth/login">Log In</a></h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+	<div class="content-div">
+		<div><span>Signup</span></div>
+		<form method="POST" class="signup-form">
+		    {% csrf_token %}
+			{% for field in form %}
+				<div>{{ field.label_tag }}</div>
+				<div>{{ field }}</div>			    
+		    {% endfor %}
+		    <p class="error-p">{{ error }}</p>
+		    <button type="submit">Submit</button>
+		</form>
+	</div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-div fixed-bottom">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div>
+            <ul>
+                <ol>Careers</ol>
+                <ol>Systems Health</ol>
+                <ol>Terms of Service</ol>
+                <ol>Privacy</ol>
+                <ol>Non-Discrimination Policy</ol>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <div><span>Visit us</span></div>
+                <img src="{% static 'imgs/img62.png' %}">
+                <img src="{% static 'imgs/img61.png' %}">
+            </div>
+            <div>
+                <div><span>Need Help?</span></div>
+                <div><span>+1 (646) 787 6998</span></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

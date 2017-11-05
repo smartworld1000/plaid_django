@@ -1,0 +1,142 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block header %}
+	<div class="header">
+		<div class="title">
+			<h1><a href="/">FINSITE_PLAID</a></h1>
+		</div>
+		<div class="auth-div">
+			<!-- <h3><a href="/auth/login">Log in</a></h1> -->
+			<h3><a href="/">+1 646 787 6998</a></h1>
+			<h3><a href="/auth/login">Log In</a></h1>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="info-div">
+			<div class="float-l">
+				<div>
+					<div><span>We're Springbok a one shop for your wealth.</span></div>
+					<div><span>We do the best for you.</span></div>
+					<div><span>So you can stop worring about finding the best deal.</span></div>
+				</div>
+				<a href="/auth/signup"><button class="button-green-0">It's right here</button></a>
+			</div>
+			<div class="float-r">
+				<img src="{% static 'imgs/content-1.png' %}">
+			</div>
+		</div>
+		<div class="info-div">
+			<div class="title-div">
+				<span>What do we do?</span>
+			</div>
+			<div>
+				<div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img1.png' %}">
+						<div><span>College Planning</span></div>
+						<div><span>We have sophisticated</br>tools to make sure you</br>can fund your cild for</br>college.</span></div>
+					</div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img4.png' %}">
+						<div><span>Tax Planning</span></div>
+						<div><span>We work with tax experts</br>to ensure we save you the</br>most money.</span></div>
+					</div>
+				</div>
+				<div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img2.png' %}">
+						<div><span>Budgeting and Investing</span></div>
+						<div><span>We use the latest technology in</br>machine learning to ensure we</br>can save you the most money.</span></div>
+					</div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img5.png' %}">
+						<div><span>Retirement</span></div>
+						<div><span>We provide products to make sure you</br>have the best chances of a comfortable</br>retirement. We offer services for 401(k),</br>Roth 401(k) plans.</span></div>
+					</div>
+				</div>
+				<div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img3.png' %}">
+						<div><span>Creating an emergency fund</span></div>
+						<div><span>Emergencies happen. We are there fore</br>you. We make sure you are best prepared</br>for these eventualities.</span></div>
+					</div>
+					<div class="info-element">
+						<img src="{% static 'imgs/img6.png' %}">
+						<div><span>Life Priorities</span></div>
+						<div><span>We use proprietary algorithms to ensure</br>you have the best change of achieving</br>your aims.</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info-div">
+			<div class="title-div">
+				<span>Why are we better?</span>
+			</div>
+			<div>
+				<div class="info-element">
+					<img src="{% static 'imgs/img31.png' %}">
+					<div><span>Your Personal Expert</span></div>
+					<div><span>Our expert is on call 24/7</br>for all your needs.</span></div>
+				</div>
+				<div class="info-element">
+					<img src="{% static 'imgs/img32.png' %}">
+					<div><span>Technology Confident</span></div>
+					<div><span>Technology is the core confidency</br>of our firm to make sure we find</br> the best deal for you.</span></div>
+				</div>
+				<div class="info-element">
+					<img src="{% static 'imgs/img33.png' %}">
+					<div><span>Wide range of financial products</span></div>
+					<div><span>Offering relevent services to</br>ensure your financial success.</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="info-div">
+			<div>
+				<div><span>So what's the catch?</span></div>
+				<div><span>Well it's simple, there isn't one!</span></div>
+				<div><span>We charge a <strong>0.2%</strong> flat fee for assets under management</span></div>
+			</div>
+		</div>
+		<div class="info-div">
+			<div>
+				<img src="{% static 'imgs/content-2.png' %}">
+				<div><span>You matter and so does your wealth.</span></div>
+				<div><span>Get the advice you deverse.</span></div>
+				<div><span>Get your free consultation.</span></div>
+				<button>You know it's the right thing to do</button>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<div class="footer-div">
+		<div class="title">
+			<h1><a href="/">FINSITE_PLAID</a></h1>
+		</div>
+		<div>
+			<ul>
+				<ol>Careers</ol>
+				<ol>Systems Health</ol>
+				<ol>Terms of Service</ol>
+				<ol>Privacy</ol>
+				<ol>Non-Discrimination Policy</ol>
+			</ul>
+		</div>
+		<div>
+			<div>
+				<div><span>Visit us</span></div>
+				<img src="{% static 'imgs/img62.png' %}">
+				<img src="{% static 'imgs/img61.png' %}">
+			</div>
+			<div>
+				<div><span>Need Help?</span></div>
+				<div><span>+1 (646) 787 6998</span></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

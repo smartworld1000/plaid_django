@@ -1,0 +1,41 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Finsite_plaid</title>
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <body>
+            <div class="wrapper">
+                <div class="page-header">
+                    {% block header %}
+                    {% endblock %}
+                </div>
+
+                <div class="sidebar">
+                    {% block sidebar %}
+                    {% endblock %}
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                {% block footer %}
+                {% endblock %}
+            </div>
+
+        </body>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block header %}
+    <div class="header">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div class="auth-div">
+            <h3><a href="/">+1 646 787 6998</a></h1>
+            <h3><a href="/auth/logout">Log In</a></h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="box">
+        {% csrf_token %}
+        <p>
+            Click the button below to open a list of Institutions - after you select one,
+            you'll be guided through an authentication process. The public_token will be passed
+            back to the example server, which will then exchange it for an access_token and if you suceess you would be verified by using bank account.
+        </p>
+
+        <button class="link-btn button-plaid">Verify via Plaid</button>
+    </div>
+    <a type="submit" class="continue-btn" href='/auth/complete_signup'>Continue</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+    <script>
+    (function($) {
+        var handler = Plaid.create({
+            apiVersion: 'v2',
+            clientName: 'Plaid Walkthrough Demo',
+            env: '{{ plaid_environment }}',
+            product: ['transactions'],
+            key: '{{ plaid_public_key }}',
+            onSuccess: function(public_token) {
+                $('.continue-btn').fadeIn('slow');
+            },
+        });
+
+        $('.link-btn').on('click', function(e) {
+            handler.open();
+        });
+    })(jQuery);
+    </script>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-div fixed-bottom">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div>
+            <ul>
+                <ol>Careers</ol>
+                <ol>Systems Health</ol>
+                <ol>Terms of Service</ol>
+                <ol>Privacy</ol>
+                <ol>Non-Discrimination Policy</ol>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <div><span>Visit us</span></div>
+                <img src="{% static 'imgs/img62.png' %}">
+                <img src="{% static 'imgs/img61.png' %}">
+            </div>
+            <div>
+                <div><span>Need Help?</span></div>
+                <div><span>+1 (646) 787 6998</span></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

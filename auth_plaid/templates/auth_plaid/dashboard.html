@@ -1,0 +1,77 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block header %}
+    <div class="header">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div class="auth-div">
+            <h3><a href="/">+1 646 787 6998</a></h1>
+            <h3><a href="/auth/logout">Log out</a></h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="sidenav">
+		<div>
+			<a href="/dashboard">
+				<img src="{% static 'imgs/img01.png' %}"></br>
+				Home
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard">
+				<img src="{% static 'imgs/img02.png' %}"></br>
+				Starred
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard">
+				<img src="{% static 'imgs/img03.png' %}"></br>
+				Settings
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard">
+				<img src="{% static 'imgs/img04.png' %}"></br>
+				Vault
+			</a>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="dash-content-div">
+		<img src="{% static 'imgs/content-01.png' %}"></br>
+	</div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer-div">
+        <div class="title">
+            <h1><a href="/">FINSITE_PLAID</a></h1>
+        </div>
+        <div>
+            <ul>
+                <ol>Careers</ol>
+                <ol>Systems Health</ol>
+                <ol>Terms of Service</ol>
+                <ol>Privacy</ol>
+                <ol>Non-Discrimination Policy</ol>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <div><span>Visit us</span></div>
+                <img src="{% static 'imgs/img62.png' %}">
+                <img src="{% static 'imgs/img61.png' %}">
+            </div>
+            <div>
+                <div><span>Need Help?</span></div>
+                <div><span>+1 (646) 787 6998</span></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
